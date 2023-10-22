@@ -1,0 +1,45 @@
+terminal
+  npm init
+    entry point - backend/server.js  
+  npm i express mongoose dotenv nodemon
+  npm i bcryptjs jsonwebtoken validator nodemailer cookie-parser body-parser
+
+
+mongoose queries
+  model.create( {} )
+  model.find( {} )
+  model.findById( id );
+  model.findByIdAndUpdate( 
+    id, 
+    {new details}, 
+    {new: true, runValidators: true, useFindAndModify: false} 
+  )
+  model.limit(n);
+  model.skip(n);
+  model.countDocuments()
+  result.deleteOne();
+  result.save();
+
+error handling
+  simple error
+  async try catch error
+  promise rejection erorr - for try catch in dbConnect
+  uncaught error
+  casting error in error.js
+
+cookies are not accessible in frontend
+  so send jwt in cookies, not in localstorage
+
+jwt secret_key
+  if anyone finds out the key, then he can make tons of admin fake accounts
+
+why not to tell exactly in login that only password is wrong
+  for safety purpose
+  if any user is randomly entering email and password, he will got to know that email exists if we tell exactly that password is wrong
+
+cookie
+  res.cookie('name', value, {
+    expires: new Date(Date.now()),
+    httpOnly: true
+  });
+
