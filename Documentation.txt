@@ -4,6 +4,9 @@ terminal
   npm i express mongoose dotenv nodemon
   npm i bcryptjs jsonwebtoken validator nodemailer cookie-parser body-parser
 
+package.json
+  "start": "node backend/server.js",    // for production 
+  "dev": "nodemon backend/server.js"    // for development
 
 mongoose queries
   model.create( {} )
@@ -22,10 +25,10 @@ mongoose queries
 
 error handling
   simple error
-  async try catch error
-  promise rejection erorr - for try catch in dbConnect
-  uncaught error
-  casting error in error.js
+  async try-catch error
+  unhandled promise rejection error - for try catch in db.js
+  uncaught error - ex - using variable before declaring
+  casting error - wrong mongodb-id error in error.js
 
 cookies are not accessible in frontend
   so send jwt in cookies, not in localstorage
@@ -42,4 +45,5 @@ cookie
     expires: new Date(Date.now()),
     httpOnly: true
   });
+  const {name} = res.cookies
 

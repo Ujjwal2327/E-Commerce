@@ -3,7 +3,7 @@ class ErrorHandler extends Error {
     super(message); // this is to call the parent constructor
     this.statusCode = statusCode;
 
-    Error.captureStackTrace(this, this.constructor);  // this is to get the stack trace of the error
+    Error.captureStackTrace(this, this.constructor);  // this is to get the stack trace of the error in postman
   }
 }
 
