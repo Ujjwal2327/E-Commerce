@@ -47,3 +47,12 @@ cookie
   });
   const {name} = res.cookies
 
+
+
+http://localhost:8080/api/v1/products?keyword=pro&category=laptop&price[gte]=12&price[lt]=20000&page=2
+
+
+Todos
+while register & update email, send activation mail to that email before registering & updating
+if admin updates / delete any user, user should get mail regarding it
+should't we change product rating / review after the user has been deleted

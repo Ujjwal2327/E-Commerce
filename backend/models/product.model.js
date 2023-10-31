@@ -39,7 +39,7 @@ const productScheme = new mongoose.Schema(
     stock: {
       type: Number,
       // required: [true, "Please enter product stock"],
-      min: 1,
+      min: [0, "Stock cannot be less than 0"],
       max: [9999, "Proce cannot exceed 4 digits"],
       default: 1,
     },
@@ -49,6 +49,11 @@ const productScheme = new mongoose.Schema(
     },
     reviews: [
       {
+        user: {
+          type: mongoose.Schema.ObjectId,
+          ref: "User",  // User model
+          required: true
+        },
         name: {
           type: String,
           required: true,
