@@ -3,10 +3,24 @@ terminal
     entry point - backend/server.js  
   npm i express mongoose dotenv nodemon
   npm i bcryptjs jsonwebtoken validator nodemailer cookie-parser body-parser
+  npm start
+  npm run dev
+
+  frontend
+    npx create-react-app ./
+    npm i axios react-alert react-alert-template-basic react-helmet react-redux redux redux-thunk redux-devtools-extension react-router-dom overlay-navbar
+      npm i axios react-hot-toast react-helmet-async react-redux redux redux-thunk redux-devtools-extension react-router-dom react-icons overlay-navbar
+    npm i webfontloader
+    npm i react-rating-stars-component
+    npm start
 
 package.json
   "start": "node backend/server.js",    // for production 
   "dev": "nodemon backend/server.js"    // for development
+
+frontend package.json
+  "proxy": "http://192.168.1.5:8080"    // to run both frontend & backend together - path is of backend
+
 
 mongoose queries
   model.create( {} )

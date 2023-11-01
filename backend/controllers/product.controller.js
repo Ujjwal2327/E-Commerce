@@ -25,7 +25,7 @@ export const createProduct = catchAsyncErrors(async (req, res, next) => {
 export const getAllProducts = catchAsyncErrors(async (req, res, next) => {
 
   // for pagination
-  const resultsPerPage = 4;
+  const resultsPerPage = 8;
   const productsCount = await Product.countDocuments();
 
   // for searching and filtering
