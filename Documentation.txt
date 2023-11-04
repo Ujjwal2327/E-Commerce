@@ -12,6 +12,8 @@ terminal
       npm i axios react-hot-toast react-helmet-async react-redux redux redux-thunk redux-devtools-extension react-router-dom react-icons overlay-navbar
     npm i webfontloader
     npm i react-rating-stars-component
+    npm i react-responsive-carousel
+    
     npm start
 
 package.json

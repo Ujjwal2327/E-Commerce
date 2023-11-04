@@ -1,25 +1,29 @@
 import React, { useEffect } from "react";
 import { CgMouse } from "react-icons/cg";
 import "./Home.css";
-import Product from "./Product";
-import MetaData from "../layout/Metadata";
-import { getProduct } from "../../redux/actions/product.action";
+import ProductCard from "./ProductCard";
+import MetaData from "../Layout/Metadata";
+import { clearErrors, getProducts } from "../../redux/actions/product.action";
 import { useDispatch, useSelector } from "react-redux";
-import Loader from "../layout/Loader";
+import Loader from "../Layout/Loader";
 import toast from "react-hot-toast";
 
 const Home = () => {
   const dispatch = useDispatch();
-  const { loading, error, products, productsCount } = useSelector(
+  const { loading, error, products } = useSelector(
     (state) => state.products
   );
 
   useEffect(() => {
-    dispatch(getProduct());
-  }, [dispatch]);
+    if(error){
+      toast.error(error);
+      dispatch(clearErrors());
+    }
+    dispatch(getProducts());
+  }, [dispatch,error]);
 
   return (
-    <>
+    <div className="home">
       <MetaData title="CartXpress | Home" />
 
       <div className="banner">
@@ -40,10 +44,10 @@ const Home = () => {
         {loading ? (
           <Loader/>
         ) : (
-          products && products.map((product) => <Product product={product} key={product._id} />)
+          products && products.map((product) => <ProductCard product={product} key={product._id} />)
         )}
       </div>
-    </>
+    </div>
   );
 };
 

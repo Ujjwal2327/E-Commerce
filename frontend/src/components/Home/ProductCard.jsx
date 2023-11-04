@@ -2,11 +2,11 @@ import React from "react"
 import { NavLink } from "react-router-dom"
 import ReactStars from "react-rating-stars-component"
 
-const Product = ({ product }) => {
+const ProductCard = ({ product }) => {
 
   const options = {
     edit: false,
-    color: "rgba(20,20,20,0.1",
+    color: "rgba(20,20,20,0.1)",
     activeColor: "tomato",
     size: 20,
     value: product.rating,
@@ -14,7 +14,7 @@ const Product = ({ product }) => {
   }
   
   return (
-    <NavLink className="productCard" to={product._id}>
+    <NavLink className="productCard" to={`product/${product._id}`}>
       <img src={product.images[0]?.url} alt={product.name} />
       <p>{product.name}</p>
 
@@ -27,4 +27,4 @@ const Product = ({ product }) => {
   )
 }
 
-export default Product
+export default ProductCard

@@ -20,7 +20,7 @@ const Footer = () => {
 
       <div className='mid'>
         <img src={logo} alt='CartXpress' />
-        <p>Copyrights 2023 &copy Ujjwal2327</p>
+        <p>Copyrights 2023 &copy; Ujjwal2327</p>
       </div>
       
       <div className='right'>

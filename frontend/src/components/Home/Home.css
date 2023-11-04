@@ -1,3 +1,7 @@
+.home{
+  width: 100%;
+}
+
 .banner {
   background-image: url("../../assets/cover.png");
   background-position: center;

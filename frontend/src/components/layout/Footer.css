@@ -7,8 +7,8 @@ footer {
   align-items: center;
   /* position: relative; */
   /* bottom: 0; */
-  /* width: 100vw; */
-  /* box-sizing: border-box; */
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .left {
